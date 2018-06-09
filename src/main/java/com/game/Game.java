@@ -81,28 +81,16 @@ public class Game {
         if (strategyA.equals(strategyB)) {
             return RoundOutcome.TIE;
         }
-
+        
         switch (strategyA) {
             case SCISSORS:
-                if (strategyB.equals(Strategy.ROCK)) {
-                    outcome = RoundOutcome.WINFOR_B;
-                } else {
-                    outcome = RoundOutcome.WINFOR_A;
-                }
+                outcome = strategyB.equals(Strategy.ROCK) ? RoundOutcome.WINFOR_B : RoundOutcome.WINFOR_A;
                 break;
             case ROCK:
-                if (strategyB.equals(Strategy.PAPER)) {
-                    outcome = RoundOutcome.WINFOR_B;
-                } else {
-                    outcome = RoundOutcome.WINFOR_A;
-                }
+                outcome = strategyB.equals(Strategy.PAPER)? RoundOutcome.WINFOR_B : RoundOutcome.WINFOR_A;
                 break;
             case PAPER:
-                if (strategyB.equals(Strategy.SCISSORS)) {
-                    outcome = RoundOutcome.WINFOR_B;
-                } else {
-                    outcome = RoundOutcome.WINFOR_A;
-                }
+                outcome = strategyB.equals(Strategy.SCISSORS) ? RoundOutcome.WINFOR_B : RoundOutcome.WINFOR_A;
                 break;
         }
         return outcome;
