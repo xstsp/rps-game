@@ -21,7 +21,7 @@ public class Main {
         Player playerA = new Player("A");
         Player playerB = new Player("B");
         
-        playerA.defineStrategy(Strategy.ROCK);
+        playerA.defineStrategy(Strategy.PAPER);
         playerB.defineStrategy(Strategy.RANDOM);
         
         Game game = new Game(playerA, playerB, 100);
